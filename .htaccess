@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /GED_estrela/
+    
+    # Redirecionar raiz para public/index.php
+    RewriteRule ^$ public/index.php [L]
+    
+    # Redirecionar solicitações não-arquivo/não-diretório para public/index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
