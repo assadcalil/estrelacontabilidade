@@ -1,0 +1,177 @@
+/* 
+ * dashboard.css - Estilos específicos para o dashboard
+ */
+
+/* Cards coloridos com animação */
+.dashboard-card {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+}
+
+.dashboard-card .icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.75rem;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover .icon-box {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dashboard-card .card-footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.25rem;
+}
+
+.dashboard-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Tabelas no dashboard */
+.card .table {
+    margin-bottom: 0;
+}
+
+.card .table th {
+    font-weight: 600;
+    border-top: none;
+    background-color: rgba(0, 0, 0, 0.02);
+    color: #495057;
+}
+
+.card .table td {
+    vertical-align: middle;
+    padding: 0.75rem 1rem;
+}
+
+.card .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.015);
+}
+
+.card .table-hover tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Cabeçalhos de card com ações */
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.card-header i {
+    color: #3498db;
+}
+
+.card-actions .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Badges personalizados */
+.badge {
+    padding: 0.35em 0.65em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Breadcrumbs estilizados */
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+.breadcrumb-item a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Gráficos */
+canvas {
+    max-width: 100%;
+}
+
+/* Animação de carregamento para gráficos */
+.chart-loading {
+    position: relative;
+    min-height: 300px;
+}
+
+.chart-loading:after {
+    content: "Carregando dados...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Espaçamento e título da página */
+.d-sm-flex {
+    padding: 1rem 0;
+}
+
+.h3 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Alertas personalizados */
+.alert-info {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-color: rgba(52, 152, 219, 0.2);
+    color: #2573a7;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 992px) {
+    .dashboard-card h2 {
+        font-size: 2rem;
+    }
+    
+    .dashboard-card .icon-box {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .h3 {
+        font-size: 1.5rem;
+    }
+}
